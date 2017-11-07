@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- #BeginTemplate "../web-data/Templates/index.dwt" -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	
+	<meta content="Adobe GoLive" name="generator" />
+	<title></title>
+	<link href="style.css" media="all" rel="stylesheet" type="text/css" /><!-- #BeginHeadLocked "" -->
+  <link href="style.css" media="all" rel="stylesheet" type="text/css" /><!-- #EndHeadLocked -->
+  
+  <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="jquery.serialize-object.min.js"></script>
+  
+  <script type="text/javascript">
+    function transformData(formObject) {
+      console.log(formObject);
+      // TODO: transform here
+      return formObject;
+    }
+
+    $( document ).ready( function() {
+      var $form = $('#registration_form'),
+        url = "https://script.google.com/macros/s/AKfycbxf5NkyOcQyHMy-N1WCgWKYDZwNvK7U8oGtweEmuU95ipofTK_m/exec";
+
+      $('#submit_form').on('click', function(e) {
+        e.preventDefault();
+        $('#submit_form').prop('disabled', true);
+        setTimeout(function() {
+          // re-enable after 5 seconds in case something went wrong
+          $('#submit_form').prop('disabled', false);
+        }, 5000);
+
+        // submit the form data
+        var jqxhr = $.ajax({
+          url: url,
+          method: "POST",
+          dataType: "json",
+          data: transformData($form.serializeObject())
+        }).done(function() {
+          alert("Registration submitted successfully!");
+          window.location.href = "/index.html";
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="container"><img alt="" border="0" class="logo" src="images/logo.gif" />
+<div class="address">
+<p><a href="mailto:wvcp.registrar@gmail.com">wvcp.registrar@gmail.com</a><br />
+470 roosevelt avenue<br />
+ottawa, on K2A 1Z6<br />
+613.728.9473</p>
+</div>
+<!--address-->
+
+<div class="menu"><a href="index.html">home </a>| <a href="mission.html">philosophy &amp; play</a> | <a href="programs.html">programs</a> | <a href="testimonials.html">the hype!</a> | <a href="teachers.html">meet the teachers </a>| <a href="cooperate.html">how we co-operate</a> | <a href="contact.html">contact us</a></div>
+<!--menu--><!-- #BeginEditable "content" -->
+
+<!-- Begin registration form  -->
+
+<form id="registration_form">
+  <fieldset>
+    <legend>Child's Information</legend>
+
+    <p>
+      <label for="First_Name">
+        First Name: <input type="text" id="First_Name" name="First_Name">
+      </label>
+
+      <label for="Middle_Name">
+        Middle Name: <input type="text" id="Middle_Name" name="Middle_Name">
+      </label>
+
+      <label for="Surname">
+        Surname: <input type="text" id="Surname" name="Surname">
+      </label>
+    </p>
+
+    <p>
+      <label for="Preferred_Name">
+        Preferred Name: <input type="text" id="Preferred_Name" name="Preferred_Name">
+      </label>
+
+      <label for="DOB">
+        Date of Birth (DD/MM/YYYY): <input type="text" id="DOB" name="DOB">
+      </label>
+    </p>
+
+  </fieldset>
+
+  <fieldset>
+  <legend>Home Address</legend>
+    <p>
+      <label for="Home_Address">
+        Home Address: <input type="text" id="Home_Address" name="Home_Address">
+      </label>
+
+      <label for="City">
+        City: <input type="text" id="City" name="City">
+      </label>
+    </p>
+
+    <p>
+      <label for="Province">
+        Province: <input type="text" id="Province" name="Province">
+      </label>
+
+      <label for="Postal_Code">
+        Postal Code: <input type="text" id="Postal_Code" name="Postal_Code">
+      </label>
+    </p>
+
+  </fieldset>
+
+  <p>
+    <button type="submit" id="submit_form">Submit Registration Package</button>
+  </p>
+</form>
+
+<!-- #EndEditable --></div>
+<!--container-->
+
+<div class="footer">
+<div class="footerleft">copyright 2007 westboro village cooperative preschool</div>
+<!--footerleft-->
+
+<div class="footerright">site design by <a href="http://www.amandadevries.com" target="_blank">amanda devries</a></div>
+<!--footerright--></div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41891145-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--footer--></body>
+<!-- #EndTemplate --></html>
