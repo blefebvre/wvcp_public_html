@@ -1,1 +1,2 @@
-# wvcp_public_html
+# wvcp.github.io
+WVCP website
