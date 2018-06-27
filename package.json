@@ -1,0 +1,25 @@
+{
+  "name": "wvcp_public_html",
+  "version": "0.0.1",
+  "description": "Sandbox for prototyping WVCP site changes",
+  "main": "index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "live-server --open=index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blefebvre/wvcp_public_html.git"
+  },
+  "author": "blefebvre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blefebvre/wvcp_public_html/issues"
+  },
+  "homepage": "https://github.com/blefebvre/wvcp_public_html#readme",
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}
