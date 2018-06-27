@@ -68,5 +68,5 @@ a.show-detail {
 }
 
 .checklist .number {
-    text-decoration: underline;
+    font-weight: bold;
 }
